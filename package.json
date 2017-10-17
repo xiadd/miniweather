@@ -4,19 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start pm2.json",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "bunyan": "^1.8.12",
     "config": "^1.26.2",
+    "debug": "^3.1.0",
     "dotenv": "^4.0.0",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
     "koa-static": "^4.0.1",
-    "mongoose": "^4.12.3"
+    "lodash": "^4.17.4",
+    "log4js": "^2.3.7",
+    "mongoose": "^4.12.3",
+    "pm2": "^2.7.1"
   }
 }
