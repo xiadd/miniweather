@@ -54,7 +54,7 @@ class WechatApi {
    * @param {object} menu 
    * @memberof WechatApi
    */
-  async setCustomeMenu (menu,) {
+  async setCustomeMenu (menu) {
     const url = 'https://api.weixin.qq.com/cgi-bin/menu/create'
     const access_token = await this.getAccessToken()
     const response = await axios.post(url, menu, {
@@ -95,18 +95,21 @@ class WechatApi {
   async sendTemplateMessage (data, openid, template_id, detailurl) {
     const url = 'https://api.weixin.qq.com/cgi-bin/message/template/send'
     const access_token = await this.getAccessToken()
-    const postData = {
+    var postData = {
       touser: openid,
       template_id: template_id,
-      data: data
     }
-    if (detailurl) postData.url = detailurl
-    const response = await axios.post(url, postData, {
+    if (detailurl) {
+      postData.url = detailurl
+    }
+    const response = await axios({
+      method: 'post',
+      url: url,
+      data: postData,
       params: {
         access_token: access_token
       }
     })
-    console.log(response.data)
     return response.data
   }
 
