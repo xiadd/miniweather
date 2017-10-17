@@ -1,0 +1,9 @@
+{
+  "appid": "your appid",
+  "appsecret": "your appsecret",
+  "token": "your token",
+  "db": {
+    "url": "your db url",
+    "password": "your db password"
+  }
+}
