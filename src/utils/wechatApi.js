@@ -30,10 +30,10 @@ class WechatApi {
 
   getAccessToken () {
     const url = 'https://api.weixin.qq.com/cgi-bin/token'
-    return new Promise((resove, reject) => {
+    return new Promise((resolve, reject) => {
       client.get('access_token', async (err, token) => {
-        if (err) reject(err)
-        if (token) resolve(token)
+        if (err) return reject(err)
+        if (token) return resolve(token)
         const response = await axios.get(url, {
           params: {
             grant_type: 'client_credential',
@@ -57,7 +57,7 @@ class WechatApi {
   async setCustomeMenu (menu,) {
     const url = 'https://api.weixin.qq.com/cgi-bin/menu/create'
     const access_token = await this.getAccessToken()
-    const response = await axios.get(url, menu, {
+    const response = await axios.post(url, menu, {
       params: {
         access_token: access_token
       }
@@ -80,6 +80,33 @@ class WechatApi {
         access_token: access_token
       }
     })
+    return response.data
+  }
+
+  /**
+   * @description 发送模板消息
+   * 
+   * @param {object} data 
+   * @param {string} openid 
+   * @param {string} template_id 
+   * @param {string} url 
+   * @memberof WechatApi
+   */
+  async sendTemplateMessage (data, openid, template_id, detailurl) {
+    const url = 'https://api.weixin.qq.com/cgi-bin/message/template/send'
+    const access_token = await this.getAccessToken()
+    const postData = {
+      touser: openid,
+      template_id: template_id,
+      data: data
+    }
+    if (detailurl) postData.url = detailurl
+    const response = await axios.post(url, postData, {
+      params: {
+        access_token: access_token
+      }
+    })
+    console.log(response.data)
     return response.data
   }
 
