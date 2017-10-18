@@ -2,7 +2,7 @@
   "appid": "your appid",
   "appsecret": "your appsecret",
   "token": "your token",
-  "authorize_redirect_url": "your url",
+  "authorize_redirect_url": "your url/wechat",
   "db": {
     "url": "your db url",
     "password": "your db password"
