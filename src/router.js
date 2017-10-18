@@ -16,7 +16,7 @@ router.get('/auth', async ctx => {
   const code = ctx.query.code
   const data = await Auth.getAccessToken(code)
   const userinfo = await Auth.getUserinfo(data.access_token, data.openid)
-  ctx.body = userinfo
+  ctx.body = `<img src=${userinfo.headimgurl}>`
 })
 
 module.exports = router

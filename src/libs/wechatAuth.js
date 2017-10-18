@@ -2,6 +2,11 @@ const config = require('config')
 const axios = require('axios')
 const qs = require('querystring')
 
+/**
+ * @description 这里主要是微信网页开发授权部分操作
+ * 
+ * @class WechatAuth
+ */
 class WechatAuth {
   constructor (appid, appsecret) {
     this.accessTokenUrl = 'https://api.weixin.qq.com/sns/oauth2/access_token'
