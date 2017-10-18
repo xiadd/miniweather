@@ -8,6 +8,20 @@ const config = require('config')
  */
 class WechatMessage {
   constructor () {}
+
+  get instance () {
+    return new WechatMessage()
+  }
+
+  /**
+   * @public
+   * @param {*} handle 
+   */
+  message (handle) {
+    return async (ctx, next) => {
+      const body = await handle(message, ctx)
+    }
+  }
 }
 
 module.exports = WechatMessage
