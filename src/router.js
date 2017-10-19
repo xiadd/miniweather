@@ -3,10 +3,13 @@ const config = require('config')
 
 const WechatApi = require('./libs/wechatApi')
 const WechatAuth = require('./libs/wechatAuth')
+const WechatMessage = require('./libs/wechatMessage')
 const genetrateSignature = require('./utils/getSign')
 
 const Auth = new WechatAuth().instance
 const Api = new WechatApi().instance
+const Message = new WechatMessage().instance
+
 
 const router = new Router()
 
@@ -20,10 +23,12 @@ router.get('/wechat', async ctx => {
   }
 })
 
-router.post('/wechat', ctx => {
-  console.log(ctx.request.body)
-  ctx.body = 'success'
-})
+router.post('/wechat', Message.message(async function (message, ctx) {
+  return {
+    content: message.Content,
+    type: 'text'
+  }
+}))
 
 router.get('/auth', async ctx => {
   const code = ctx.query.code
