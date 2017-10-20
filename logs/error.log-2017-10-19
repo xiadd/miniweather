@@ -1,0 +1,16 @@
+[2017-10-19 21:59:56.910] [ERROR] app - ReferenceError: message is not defined
+    at /Users/xiadd/Documents/node_projects/miniweather/src/libs/wechatMessage.js:22:33
+    at dispatch (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.3.2.1@koa-compose/index.js:45:18)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.7.2.1@koa-router/lib/router.js:345:16
+    at dispatch (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.3.2.1@koa-compose/index.js:44:32)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.7.2.1@koa-router/lib/router.js:350:31)
+    at dispatch (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.0.0@koa-compose/index.js:42:32)
+    at next (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.0.0@koa-compose/index.js:43:18)
+    at /Users/xiadd/Documents/node_projects/miniweather/src/middlewares/error.js:4:13
+    at dispatch (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.0.0@koa-compose/index.js:42:32)
+    at next (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.0.0@koa-compose/index.js:43:18)
+    at bodyParser (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.2.0@koa-bodyparser/index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)

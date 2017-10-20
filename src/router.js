@@ -10,6 +10,8 @@ const Auth = new WechatAuth().instance
 const Api = new WechatApi().instance
 const Message = new WechatMessage().instance
 
+const UserController = require('./controllers/user')
+
 
 const router = new Router()
 
@@ -30,11 +32,6 @@ router.post('/wechat', Message.message(async function (message, ctx) {
   }
 }))
 
-router.get('/auth', async ctx => {
-  const code = ctx.query.code
-  const data = await Auth.getAccessToken(code)
-  const userinfo = await Auth.getUserinfo(data.access_token, data.openid)
-  ctx.body = userinfo
-})
+router.get('/auth', UserController.login)
 
 module.exports = router

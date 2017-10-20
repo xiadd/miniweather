@@ -3,6 +3,10 @@ const xml2js = require('xml2js')
 const config = require('config')
 const ejs = require('ejs')
 
+/**
+ * @description 解析xml
+ * @param {*} xml 
+ */
 function parseXML (xml) {
   return new Promise((resolve, reject) => {
     xml2js.parseString(xml, {trim: true}, function (err, obj) {
@@ -15,6 +19,10 @@ function parseXML (xml) {
   })
 }
 
+/**
+ * 格式化收到的消息
+ * @param {*} result 
+ */
 function formatMessage (result) {
   var message = {}
   if (typeof result === 'object') {
@@ -39,6 +47,12 @@ function formatMessage (result) {
   return message
 }
 
+/**
+ * 回复消息
+ * @param {*} content 
+ * @param {*} fromUsername 
+ * @param {*} toUsername 
+ */
 function reply (content, fromUsername, toUsername) {
   var info = {}
   var type = 'text'
