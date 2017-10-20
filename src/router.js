@@ -11,6 +11,7 @@ const Api = new WechatApi().instance
 const Message = new WechatMessage().instance
 
 const UserController = require('./controllers/user')
+const WeatherController = require('./controllers/weather')
 
 
 const router = new Router()
@@ -32,6 +33,10 @@ router.post('/wechat', Message.message(async function (message, ctx) {
   }
 }))
 
+// 授权登录
 router.get('/auth', UserController.login)
+
+// 获取天气情况
+router.get('/weather', WeatherController.getWeather)
 
 module.exports = router
