@@ -13,6 +13,7 @@ module.exports = {
     const code = ctx.query.code
     const data = await Auth.getAccessToken(code)
     const userinfo = await Auth.getUserinfo(data.access_token, data.openid)
+    ctx.session.user = userinfo
     if (await User.getUserByOpenid(data.openid)) {
       const user = await User.update(data.openid, userinfo)
       ctx.body = user

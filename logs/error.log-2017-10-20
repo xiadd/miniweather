@@ -1,0 +1,194 @@
+[2017-10-20 20:10:33.518] [ERROR] app - { MongoError: E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }
+    at Function.MongoError.create (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/error.js:31:11)
+    at toError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:139:22)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/collection.js:668:23
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function] }
+[2017-10-20 20:11:04.386] [ERROR] app - { ValidationError: User validation failed: openid: Path `openid` is required.
+    at ValidationError.inspect (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:427:38)
+    at inspect (util.js:321:10)
+    at Object.format (util.js:188:12)
+    at Object.inspect (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:36:66)
+    at formatValue (util.js:427:38)
+    at inspect (util.js:321:10)
+    at Object.format (util.js:188:12)
+    at formatLogData (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:55:22)
+    at basicLayout (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:118:9)
+    at app (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/appenders/dateFile.js:30:19)
+    at appenders.forEach (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/log4js.js:142:5)
+    at Array.forEach (<anonymous>)
+    at Logger.sendLogEventToAppender [as dispatch] (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/log4js.js:141:13)
+    at Logger._log (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/logger.js:95:12)
+    at Logger.(anonymous function) [as error] (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/logger.js:127:14)
+  errors: 
+   { openid: 
+      { ValidatorError: Path `openid` is required.
+    at new ValidatorError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:758:13)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:765:19)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/document.js:1506:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `openid` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'openid',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'User validation failed',
+  name: 'ValidationError' }
+[2017-10-20 20:11:07.396] [ERROR] app - { ValidationError: User validation failed: openid: Path `openid` is required.
+    at ValidationError.inspect (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:427:38)
+    at inspect (util.js:321:10)
+    at Object.format (util.js:188:12)
+    at Object.inspect (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:36:66)
+    at formatValue (util.js:427:38)
+    at inspect (util.js:321:10)
+    at Object.format (util.js:188:12)
+    at formatLogData (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:55:22)
+    at basicLayout (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:118:9)
+    at app (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/appenders/dateFile.js:30:19)
+    at appenders.forEach (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/log4js.js:142:5)
+    at Array.forEach (<anonymous>)
+    at Logger.sendLogEventToAppender [as dispatch] (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/log4js.js:141:13)
+    at Logger._log (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/logger.js:95:12)
+    at Logger.(anonymous function) [as error] (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/logger.js:127:14)
+  errors: 
+   { openid: 
+      { ValidatorError: Path `openid` is required.
+    at new ValidatorError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:758:13)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:765:19)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/document.js:1506:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `openid` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'openid',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'User validation failed',
+  name: 'ValidationError' }
+[2017-10-20 20:11:29.316] [ERROR] app - { MongoError: E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }
+    at Function.MongoError.create (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/error.js:31:11)
+    at toError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:139:22)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/collection.js:668:23
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function] }
+[2017-10-20 20:12:53.576] [ERROR] app - { MongoError: E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }
+    at Function.MongoError.create (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/error.js:31:11)
+    at toError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:139:22)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/collection.js:668:23
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function] }
+[2017-10-20 20:13:15.151] [ERROR] app - { MongoError: E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }
+    at Function.MongoError.create (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/error.js:31:11)
+    at toError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:139:22)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/collection.js:668:23
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.2.33@mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.1.17@mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: wechat.users index: openid_1 dup key: { : "old9juDyPzWd7zsc0Y8u1LBpKwu8" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function] }
+[2017-10-20 20:17:27.412] [ERROR] app - { ValidationError: User validation failed: openid: Path `openid` is required.
+    at ValidationError.inspect (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:427:38)
+    at inspect (util.js:321:10)
+    at Object.format (util.js:188:12)
+    at Object.inspect (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:36:66)
+    at formatValue (util.js:427:38)
+    at inspect (util.js:321:10)
+    at Object.format (util.js:188:12)
+    at formatLogData (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:55:22)
+    at basicLayout (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/layouts.js:118:9)
+    at app (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/appenders/dateFile.js:30:19)
+    at appenders.forEach (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/log4js.js:142:5)
+    at Array.forEach (<anonymous>)
+    at Logger.sendLogEventToAppender [as dispatch] (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/log4js.js:141:13)
+    at Logger._log (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/logger.js:95:12)
+    at Logger.(anonymous function) [as error] (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.2.3.7@log4js/lib/logger.js:127:14)
+  errors: 
+   { openid: 
+      { ValidatorError: Path `openid` is required.
+    at new ValidatorError (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:758:13)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/schematype.js:765:19)
+    at /Users/xiadd/Documents/node_projects/miniweather/node_modules/.4.12.3@mongoose/lib/document.js:1506:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `openid` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'openid',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'User validation failed',
+  name: 'ValidationError' }

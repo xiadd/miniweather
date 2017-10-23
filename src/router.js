@@ -5,6 +5,7 @@ const WechatApi = require('./libs/wechatApi')
 const WechatAuth = require('./libs/wechatAuth')
 const WechatMessage = require('./libs/wechatMessage')
 const genetrateSignature = require('./utils/getSign')
+const auth = require('./middlewares/auth')
 
 const Auth = new WechatAuth().instance
 const Api = new WechatApi().instance
@@ -16,25 +17,17 @@ const WeatherController = require('./controllers/weather')
 
 const router = new Router()
 
-router.get('/wechat', async ctx => {
-  const { signature, timestamp, nonce, echostr } = ctx.query
-  const token = config.get('token')
-  if (genetrateSignature(signature, timestamp, nonce, token)) {
-    ctx.body =  echostr
-  } else {
-    ctx.body = false
-  }
-})
-
-router.post('/wechat', Message.message(async function (message, ctx) {
-  return {
-    content: message.Content,
-    type: 'text'
-  }
-}))
-
 // 授权登录
 router.get('/auth', UserController.login)
+
+// 验证权限问题
+router.use(auth())
+
+router.get('/wechat', async ctx => {
+  
+})
+
+router.post('/wechat', Message.message())
 
 // 获取天气情况
 router.get('/weather', WeatherController.getWeather)

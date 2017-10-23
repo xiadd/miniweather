@@ -1,4 +1,7 @@
 const axios = require('axios')
+const WechatMessage = require('../libs/wechatMessage')
+
+const Message = new WechatMessage().instance
 
 
 module.exports = {
